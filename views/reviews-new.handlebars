@@ -1,41 +1,13 @@
+<!-- views/reviews-new.handlebars -->
+
 <form method="POST" action="/reviews">
-  <fieldset>
-    <legend>New Review</legend>
-    <!-- TITLE -->
-    <p>
-      <label for="title">Title</label><br>
-      <input type="text" name="title" />
-    </p>
-  </fieldset>
+  {{> reviews-form}}
 
-  <!-- MOVIE TITLE -->
-    <p>
-      <label for="movie-title">Movie Title</label><br>
-      <input id="movie-title" type="text" name="movieTitle" />
-    </p>
-
-    <!-- DESCRIPTION -->
-    <p>
-      <label for="description-text">Description</label><br>
-      <textarea id="description-text" name="description" rows="10" /></textarea>
-    </p>
-  </fieldset>
-
-  <!-- RATINGS -->
-  <p>
-      <label for = "rating">Rating</label><br>
-      <select id="rating" name = "movie-rating">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-  </p>
   <!-- BUTTON -->
   <p>
     <button type="submit">Save Review</button>
+    <!--ISSUE: takes you to "\result" instead of the home page "\"-->
+    <button href="/">Cancel</button>
   </p>
 
 </form>
