@@ -1,13 +1,14 @@
 <!-- views/reviews-new.handlebars -->
 
-<form method="POST" action="/reviews">
-  {{> reviews-form}}
-
-  <!-- BUTTON -->
-  <p>
-    <button type="submit">Save Review</button>
-    <!--ISSUE: takes you to "\result" instead of the home page "\"-->
-    <button href="../">Cancel</button>
-  </p>
-
-</form>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <form method="POST" action="/reviews">
+      {{> reviews-form}}
+      <!-- BUTTON -->
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">Save Review</button>
+        <button class="btn btn-primary" href="../">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
