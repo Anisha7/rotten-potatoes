@@ -1,4 +1,5 @@
 
+const port = process.env.PORT || 5000;
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
 
@@ -31,6 +32,6 @@ reviews(app)
 //const Review = require('./models/reviews')
 
 
-module.exports = app.listen(3000, () => {
-  console.log('App listening on port 3000!')
+module.exports = app.listen(port, () => {
+  console.log(`App listening on port ${port}!`)
 })
