@@ -9,6 +9,9 @@ const bodyParser = require('body-parser');
 import express from 'express'
 const methodOverride = require('method-override')
 
+// for comment model
+const Review = require('./models/reviews')
+const Comment = require('./models/comment')
 
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
