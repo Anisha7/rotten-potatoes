@@ -1,7 +1,7 @@
 // test-reviews.js
 const chai = require('chai');
 const chaiHttp = require('chai-http');
-const server = require('../start');
+const server = require('../server');
 const should = chai.should();
 const Review = require('../models/reviews');
 
@@ -116,6 +116,6 @@ it('should delete a SINGLE review on /reviews/<id> DELETE', (done) => {
       done();
     });
   });
-  
+
 });
 });
