@@ -17,7 +17,7 @@ const Comment = require('./models/comment')
 const app = express()
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
+const comments = require('./controllers/comments.js');
 const reviews = require('./controllers/reviews.js');
 
 // initializing handlebars
@@ -28,6 +28,7 @@ app.set('view engine', 'handlebars');
 // initialized
 // override with POST having ?_method=DELETE or ?_method=PUT
 app.use(methodOverride('_method'))
+comments(app)
 reviews(app)
 //const Review = require('./models/reviews')
 
