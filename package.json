@@ -22,7 +22,7 @@
     "babel-register": "^6.26.0"
 },
   "scripts": {
-    "start": "server.js"
+    "start": "app.js"
 }
 
 }

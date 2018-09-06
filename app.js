@@ -6,8 +6,8 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes
 // INITIALIZE BODY-PARSER AND ADD IT TO APP
 const bodyParser = require('body-parser');
 
-//ßconst express = require('express')
-import express from 'express'
+const express = require('express')
+//import express from 'express'
 const methodOverride = require('method-override')
 
 // for comment model
