@@ -34,7 +34,6 @@ module.exports = function (app) {
       // find review
       Review.findById(req.params.id).then(review => {
         // fetch its comments
-        //Comment.findById(req.params.id).then(comments => {
         Comment.find({ reviewId: req.params.id }).then(comments => {
           // respond with the template with both values
           res.render('reviews-show', { review: review, comments: comments })
@@ -72,5 +71,15 @@ module.exports = function (app) {
       console.log(err.message);
     })
   })
+
+  // DELETE
+    app.delete('/reviews/comments/:id', function (req, res) {
+      console.log("DELETE comment")
+      Comment.findByIdAndRemove(req.params.id).then((comment) => {
+        res.redirect(`/reviews/${comment.reviewId}`);
+      }).catch((err) => {
+        console.log(err.message);
+      })
+    })
 
 }
