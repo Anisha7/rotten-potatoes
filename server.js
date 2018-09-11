@@ -19,6 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const comments = require('./controllers/comments.js');
 const reviews = require('./controllers/reviews.js');
+const movies = require('./controllers/movies.js');
 
 // initializing handlebars
 var exphbs = require('express-handlebars');
