@@ -15,7 +15,11 @@ module.exports = function (app) {
   // })
 
   // NEW review
-  app.get('/reviews/new', (req, res) => {
+  // app.get('/reviews/new', (req, res) => {
+  //   res.render('reviews-new', {});
+  // })
+
+  app.get('/movies/:movieId/reviews/new', (req, res) => {
     res.render('reviews-new', {});
   })
 
