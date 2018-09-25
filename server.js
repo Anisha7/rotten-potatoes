@@ -31,6 +31,7 @@ app.set('view engine', 'handlebars');
 app.use(methodOverride('_method'))
 comments(app)
 reviews(app)
+movies(app)
 //const Review = require('./models/reviews')
 
 
