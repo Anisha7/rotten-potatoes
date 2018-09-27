@@ -1,6 +1,6 @@
 
 const port = process.env.PORT || 5000;
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/rotten-potatoes');
 
 // INITIALIZE BODY-PARSER AND ADD IT TO APP

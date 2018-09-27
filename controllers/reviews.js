@@ -6,20 +6,6 @@ const MovieDb = require('moviedb-promise')
 const moviedb = new MovieDb('28721379fb90bd78a4d224a9cb6ddbcc')
 
 module.exports = function (app) {
-  // app.get('/', (req, res) => {
-  //   Review.find()
-  //     .then(reviews => {
-  //       res.render('reviews-index', {reviews: reviews});
-  //     })
-  //     .catch(err => {
-  //       console.log(err);
-  //     });
-  // })
-
-  // NEW review
-  // app.get('/reviews/new', (req, res) => {
-  //   res.render('reviews-new', {});
-  // })
 
   app.get('/movies/:movieId/reviews/new', (req, res) => {
     console.log(req.body)
