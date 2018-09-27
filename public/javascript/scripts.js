@@ -93,4 +93,20 @@ window.onload = function() {
         })
     }
 
+    if (document.getElementsByClassName('deleteReview') != null) {
+        for (var i = 0; i < document.getElementsByClassName('deleteReview').length; i++) {
+            document.getElementsByClassName('deleteReview')[i].addEventListener('click', (e) => {
+                let passedReviewId = e.target.getAttribute('data-review-id');
+                axios.delete(`/admin/delete/${passedReviewId}`)
+                    .then(response => {
+                        elementToErase = e.target.parentNode.parentNode;
+                        elementToErase.parentNode.removeChild(elementToErase);
+                    })
+                    .catch(error => {
+                        console.log(error)
+                    });
+            })
+        }
+    }
+
 }

@@ -25,6 +25,7 @@ app.use(express.static('public'));
 const comments = require('./controllers/comments.js');
 const reviews = require('./controllers/reviews.js');
 const movies = require('./controllers/movies.js');
+const admin = require('./controllers/admin.js');
 
 // initializing handlebars
 var exphbs = require('express-handlebars');
@@ -37,6 +38,7 @@ app.use(methodOverride('_method'))
 comments(app)
 reviews(app)
 movies(app)
+admin(app)
 //const Review = require('./models/reviews')
 
 
